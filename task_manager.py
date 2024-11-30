@@ -38,7 +38,6 @@ class TaskManager():
     def load_from_json(self, filename: str):
         with open(filename, 'r') as file:
             from_file = json.load(file)
-        print(from_file)
         return from_file
 
     def get_list(self):
