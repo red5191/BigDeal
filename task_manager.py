@@ -6,12 +6,12 @@ class TaskManager():
         self.tasklist = []
         self.task = {}
 
-    def add_task(self, description : str):
+    def add_task(self, description: str):
         for self.task in self.tasklist:
             if description == self.task['description']:
                 return print(f'Задача {self.task['description']} уже есть в списке.')
 
-        self.task = {'description' : description, 'completed' : False}
+        self.task = {'description': description, 'completed': False}
         self.tasklist.append(self.task)
         print(f'Задача {self.task['description']} добавлена в список.')
 

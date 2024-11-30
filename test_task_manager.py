@@ -4,6 +4,7 @@ from task_manager import TaskManager
 
 test_manager = TaskManager()
 
+
 def test_task_manager(manager):
     manager.add_task('DO IT')
     try:
@@ -12,7 +13,7 @@ def test_task_manager(manager):
         raise AssertionError('Ошибка: Задание не было создано')
 
     manager.complete_task(0)
-    assert manager.get_list()[0]['completed'] == True,'Ошибка: Задание не отмечено выполненым'
+    assert manager.get_list()[0]['completed'] == True, 'Ошибка: Задание не отмечено выполненым'
 
     manager.add_task('JUST DO IT')
     manager.remove_task(1)
